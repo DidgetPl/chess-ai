@@ -56,11 +56,13 @@ class EvaluationModel(pl.LightningModule):
     self.batch_size = batch_size
     self.learning_rate = learning_rate
     self.subset_count = subset_count
+    
     layers = []
     for i in range(layer_count-1):
       layers.append((f"linear-{i}", nn.Linear(808, 808)))
       layers.append((f"relu-{i}", nn.ReLU()))
     layers.append((f"linear-{layer_count-1}", nn.Linear(808, 1)))
+    
     self.seq = nn.Sequential(OrderedDict(layers))
 
   def forward(self, x):

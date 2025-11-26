@@ -17,6 +17,10 @@ PIECE_IMAGES = {}
 
 PIECE_TYPES = [chess.PAWN, chess.KNIGHT, chess.BISHOP, chess.ROOK, chess.QUEEN, chess.KING]
 
+pygame.display.set_caption("Chess AI")
+icon_surface = pygame.image.load("img\\wK.png")
+pygame.display.set_icon(icon_surface)
+
 def board_to_binary(board: chess.Board) -> torch.Tensor:
     bits = []
     for color in [chess.WHITE, chess.BLACK]:
