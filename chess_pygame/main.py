@@ -1,6 +1,6 @@
 import chess
 import pygame
-from draw_board_module import draw_board, draw_pieces  # jeśli masz osobno
+from draw_board_module import draw_board, draw_pieces
 from game import ChessGame
 from ui import GameUI
 
