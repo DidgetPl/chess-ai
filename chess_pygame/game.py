@@ -51,7 +51,7 @@ class ChessGame:
     def check_game_over(self):
         b = self.board
         if b.is_checkmate():
-            return f"Szach-mat! {'BIAŁY' if b.turn == chess.BLACK else 'CZARNY'} wygrywa"
+            return f"Szach-mat! {'Biały' if b.turn == chess.BLACK else 'Czarny'} wygrywa"
         if b.is_stalemate():
             return "Pat — remis"
         if b.is_insufficient_material():
